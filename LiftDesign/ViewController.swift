@@ -16,7 +16,7 @@ protocol LiftHandler {
 
 extension LiftHandler {
     @discardableResult func wait(at floorNumber : Int, seconds : Int = 4)-> Bool {
-        print("waited for \(seconds) seconds...")
+        print("waited for \(seconds) seconds..")
         return true
     }
     @discardableResult func openDoor(at floorNumber : Int) -> Bool {
