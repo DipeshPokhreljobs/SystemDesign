@@ -13,7 +13,19 @@
 		212A894C2950CB1600A13572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212A894A2950CB1600A13572 /* Main.storyboard */; };
 		212A894E2950CB1700A13572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212A894D2950CB1700A13572 /* Assets.xcassets */; };
 		212A89512950CB1700A13572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212A894F2950CB1700A13572 /* LaunchScreen.storyboard */; };
+		21C7A548295AEC10006D4584 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C7A547295AEC10006D4584 /* PriorityQueue.swift */; };
+		21C7A550295AED57006D4584 /* LiftDesignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C7A54F295AED57006D4584 /* LiftDesignTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21C7A551295AED57006D4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 212A89392950CB1600A13572 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 212A89402950CB1600A13572;
+			remoteInfo = LiftDesign;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		212A89412950CB1600A13572 /* LiftDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,20 @@
 		212A894D2950CB1700A13572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		212A89502950CB1700A13572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		212A89522950CB1700A13572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C7A547295AEC10006D4584 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		21C7A54D295AED57006D4584 /* LiftDesignTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiftDesignTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C7A54F295AED57006D4584 /* LiftDesignTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftDesignTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		212A893E2950CB1600A13572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21C7A54A295AED57006D4584 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				212A89432950CB1600A13572 /* LiftDesign */,
+				21C7A54E295AED57006D4584 /* LiftDesignTests */,
 				212A89422950CB1600A13572 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				212A89412950CB1600A13572 /* LiftDesign.app */,
+				21C7A54D295AED57006D4584 /* LiftDesignTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +83,21 @@
 				212A89442950CB1600A13572 /* AppDelegate.swift */,
 				212A89462950CB1600A13572 /* SceneDelegate.swift */,
 				212A89482950CB1600A13572 /* ViewController.swift */,
+				21C7A547295AEC10006D4584 /* PriorityQueue.swift */,
 				212A894A2950CB1600A13572 /* Main.storyboard */,
 				212A894D2950CB1700A13572 /* Assets.xcassets */,
 				212A894F2950CB1700A13572 /* LaunchScreen.storyboard */,
 				212A89522950CB1700A13572 /* Info.plist */,
 			);
 			path = LiftDesign;
+			sourceTree = "<group>";
+		};
+		21C7A54E295AED57006D4584 /* LiftDesignTests */ = {
+			isa = PBXGroup;
+			children = (
+				21C7A54F295AED57006D4584 /* LiftDesignTests.swift */,
+			);
+			path = LiftDesignTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +120,24 @@
 			productReference = 212A89412950CB1600A13572 /* LiftDesign.app */;
 			productType = "com.apple.product-type.application";
 		};
+		21C7A54C295AED57006D4584 /* LiftDesignTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21C7A553295AED57006D4584 /* Build configuration list for PBXNativeTarget "LiftDesignTests" */;
+			buildPhases = (
+				21C7A549295AED57006D4584 /* Sources */,
+				21C7A54A295AED57006D4584 /* Frameworks */,
+				21C7A54B295AED57006D4584 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21C7A552295AED57006D4584 /* PBXTargetDependency */,
+			);
+			name = LiftDesignTests;
+			productName = LiftDesignTests;
+			productReference = 21C7A54D295AED57006D4584 /* LiftDesignTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +150,10 @@
 				TargetAttributes = {
 					212A89402950CB1600A13572 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					21C7A54C295AED57006D4584 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 212A89402950CB1600A13572;
 					};
 				};
 			};
@@ -116,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				212A89402950CB1600A13572 /* LiftDesign */,
+				21C7A54C295AED57006D4584 /* LiftDesignTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +187,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21C7A54B295AED57006D4584 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,12 +202,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				212A89492950CB1600A13572 /* ViewController.swift in Sources */,
+				21C7A548295AEC10006D4584 /* PriorityQueue.swift in Sources */,
 				212A89452950CB1600A13572 /* AppDelegate.swift in Sources */,
 				212A89472950CB1600A13572 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21C7A549295AED57006D4584 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C7A550295AED57006D4584 /* LiftDesignTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21C7A552295AED57006D4584 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 212A89402950CB1600A13572 /* LiftDesign */;
+			targetProxy = 21C7A551295AED57006D4584 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		212A894A2950CB1600A13572 /* Main.storyboard */ = {
@@ -334,6 +414,40 @@
 			};
 			name = Release;
 		};
+		21C7A554295AED57006D4584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.com.LiftDesignTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiftDesign.app/LiftDesign";
+			};
+			name = Debug;
+		};
+		21C7A555295AED57006D4584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.com.LiftDesignTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiftDesign.app/LiftDesign";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +465,15 @@
 			buildConfigurations = (
 				212A89562950CB1700A13572 /* Debug */,
 				212A89572950CB1700A13572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21C7A553295AED57006D4584 /* Build configuration list for PBXNativeTarget "LiftDesignTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C7A554295AED57006D4584 /* Debug */,
+				21C7A555295AED57006D4584 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

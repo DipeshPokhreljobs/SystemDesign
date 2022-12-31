@@ -15,14 +15,17 @@ protocol LiftHandler {
 }
 
 extension LiftHandler {
+    
     @discardableResult func wait(at floorNumber : Int, seconds : Int = 4)-> Bool {
         print("waited for \(seconds) seconds..")
         return true
     }
+    
     @discardableResult func openDoor(at floorNumber : Int) -> Bool {
         print("Door opened at \(floorNumber)")
         return true
     }
+    
     @discardableResult func closeDoor(at floorNumber : Int) -> Bool{
         print("Door closed at \(floorNumber)\n")
         print("Its moving...")
@@ -34,14 +37,12 @@ extension LiftHandler {
         wait(at: floorNumber)
         closeDoor(at: floorNumber)
     }
+    
     func handleUserRequest(request : UserRequest,lift : Lift) ->Bool {
-        
         if lift.status == .idle {
             processRequest(at: request.floorNumber)
             lift.status = .moving
             processRequest(at: request.destination)
-           
-            
         }
         else {
             if lift.direction == .up  &&   request.direction == .up {
@@ -71,20 +72,19 @@ extension LiftHandler {
 class ViewController: UIViewController , LiftHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         let lift : Lift = Lift(direction: .up, status: .idle, currentFloor: 0)!
         var  userRequests : [UserRequest] = [UserRequest(floorNumber: 3, direction: .up, destination: 4),
-                                            UserRequest(floorNumber: 5, direction: .up, destination: 7),
-                                            UserRequest(floorNumber: 5, direction: .up, destination: 7),
-                                            UserRequest(floorNumber: 8, direction: .up, destination: 10),]
-        
+                                             UserRequest(floorNumber: 5, direction: .up, destination: 7),
+                                             UserRequest(floorNumber: 5, direction: .up, destination: 7),
+                                             UserRequest(floorNumber: 8, direction: .up, destination: 10),]
         while userRequests.count != 0 {
             let completed = handleUserRequest(request: userRequests.removeFirst(), lift:lift )
         }
         print("Its stopped and became idle at ")
         lift.direction = .up
         lift.status = .idle
-       
+        
     }
 }
 
@@ -103,6 +103,7 @@ struct UserRequest{
 }
 
 class Lift {
+    
     var direction : Direction
     var status : LiftStatus
     var currentFloor : Int
@@ -110,7 +111,7 @@ class Lift {
     private var startingFloor : Int = 0
     private var endingFloor : Int = 10
     
-    init?(direction : Direction, status : LiftStatus , currentFloor : Int) { // failable initializer 
+    init?(direction : Direction, status : LiftStatus , currentFloor : Int) { // failable initializer
         
         if currentFloor < startingFloor || currentFloor > endingFloor {
             return nil
@@ -119,6 +120,5 @@ class Lift {
         self.status = status
         self.currentFloor = currentFloor
     }
-    
 }
 
